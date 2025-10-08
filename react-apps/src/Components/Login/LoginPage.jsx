@@ -13,7 +13,7 @@ export default function LoginPage() {
     e.preventDefault(); // prevent page reload
 
     if (email.trim() !== "" && password.trim() !== "") {
-      navigate("/home");
+      navigate("/homepage");
     } else {
       alert("Please enter both username and password");
     }

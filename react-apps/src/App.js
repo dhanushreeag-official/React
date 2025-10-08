@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from './Components/Login/LoginPage';
 import RegisterPage from './Components/Register/RegisterPage';
+import HomePage from './Components/Pages/HomePage';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
 
           {/* After login redirect here */}
-          <Route path="/home" element={<h1>Welcome Home!</h1>} />
+          <Route path="/homepage" element={<HomePage />} />
         </Routes>
       </Router>
     </div>

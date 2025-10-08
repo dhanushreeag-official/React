@@ -1,0 +1,55 @@
+/* Container styling */
+.side-nav-container {
+  width: 150px;
+  height: 93vh;
+  background-color: #0f172a; /* dark navy */
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar heading */
+.nav-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #38bdf8; /* light blue accent */
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* List layout */
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each menu item */
+.nav-list li {
+  margin-bottom: 15px;
+}
+
+/* Link styling */
+.nav-link {
+  display: block;
+  text-decoration: none;
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Hover and active state */
+.nav-link:hover {
+  background-color: #1e293b;
+  color: #38bdf8;
+}
+
+.nav-link.active {
+  background-color: #38bdf8;
+  color: #0f172a;
+  font-weight: 600;
+}
