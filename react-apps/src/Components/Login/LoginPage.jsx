@@ -1,20 +1,19 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import '../Styles/Login.css';
 
 export default function LoginPage() {
   const navigate = useNavigate();
 
   // State to store input values
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault(); // prevent page reload
 
-    if (username.trim() !== "" && password.trim() !== "") {
-      // You can add login validation here
-      navigate("/home"); // redirect to homepage
+    if (email.trim() !== "" && password.trim() !== "") {
+      navigate("/home");
     } else {
       alert("Please enter both username and password");
     }
@@ -26,13 +25,13 @@ export default function LoginPage() {
       <p>Enter your credentials to sign-in to your account</p>
       <form onSubmit={handleSubmit}>
         <div className="Spacing">
-          <label className="Label">UserName</label>
+          <label className="Label">Email</label>
           <input
-            type="text"
-            placeholder="Enter your username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            className="InputBox" // update state
+            type="email"
+            placeholder="Enter your email id"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="InputBox"
           />
         </div>
         <div className="Spacing">
@@ -47,6 +46,12 @@ export default function LoginPage() {
         </div>
         <button type="submit" className="SubmitBtn">Login</button>
       </form>
+      <div>
+        <p>
+          Don’t have an account?{" "}
+          <Link to="/register">Register here</Link>
+        </p>
+      </div>
     </div>
   );
 }
